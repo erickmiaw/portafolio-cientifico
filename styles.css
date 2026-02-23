@@ -396,22 +396,78 @@ a {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .name {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
     }
 
     .hero {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        padding-top: 8rem;
     }
 
     .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons>div {
         justify-content: center;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cards-grid,
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 1rem;
+    }
+
+    .timeline-item::before {
+        left: -16px;
+    }
+
+    .timeline-dot {
+        left: -21px;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .modal-content {
+        padding: 2rem 1.5rem;
+        width: 95%;
     }
 }
 
