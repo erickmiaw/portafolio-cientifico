@@ -1,18 +1,26 @@
 :root {
-    /* Premium Dark Theme Color Palette */
-    --bg-dark: #0a0a0f;
-    --bg-surface: #14141e;
-    --bg-surface-glass: rgba(20, 20, 30, 0.6);
-    --text-main: #f0f0f5;
-    --text-muted: #a0a0b0;
-    --accent-primary: #00f2fe;
-    --accent-secondary: #4facfe;
+    /* Warm, Elegant, and Humble Palette */
+    --bg-dark: #fcfaf8;
+    /* Warm off-white */
+    --bg-surface: #ffffff;
+    /* Clean white for cards */
+    --bg-surface-glass: rgba(255, 255, 255, 0.85);
+    --text-main: #332d2a;
+    /* Soft dark brown/gray for high readability */
+    --text-muted: #70665f;
+    /* Warm gray */
+    --accent-primary: #c85a40;
+    /* Terracotta / Warm Rust */
+    --accent-secondary: #dda15e;
+    /* Earthy Gold */
     --accent-gradient: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-    --gradient-glow: linear-gradient(135deg, rgba(0, 242, 254, 0.2) 0%, rgba(79, 172, 254, 0.2) 100%);
+    --gradient-glow: linear-gradient(135deg, rgba(200, 90, 64, 0.15) 0%, rgba(221, 161, 94, 0.15) 100%);
 
-    /* Typography */
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* Simpler Typography */
+    --font-heading: 'Lora', serif;
+    /* Classic, warm, academic serif */
+    --font-body: 'Open Sans', sans-serif;
+    /* Highly readable, clean sans-serif */
 }
 
 * {
@@ -66,11 +74,10 @@ a {
 }
 
 .navbar.scrolled {
-    background: var(--bg-surface-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-surface-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
@@ -145,9 +152,8 @@ a {
 }
 
 .dark-alt {
-    background-color: var(--bg-surface);
-    max-width: 100%;
-    position: relative;
+    background-color: #f4f1ed;
+    /* Slightly darker warm tone for section contrast */
 }
 
 .dark-alt .section-title,
@@ -303,7 +309,8 @@ a {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(0, 242, 254, 0.3);
+    border-color: rgba(200, 90, 64, 0.3);
+    box-shadow: 0 10px 40px var(--gradient-glow);
 }
 
 .card-category {
@@ -333,30 +340,33 @@ a {
     padding-left: 2rem;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: rgba(255, 255, 255, 0.1);
-}
-
 .timeline-item {
     position: relative;
     margin-bottom: 3rem;
 }
 
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 0;
+    bottom: -2rem;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:last-child::before {
+    bottom: 0;
+}
+
 .timeline-dot {
     position: absolute;
-    left: -2.35rem;
-    /* Ajuste visual al centro de la línea */
-    top: 0;
-    width: 16px;
-    height: 16px;
+    left: -37px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: var(--accent-primary);
+    background-color: var(--accent-primary);
     box-shadow: 0 0 10px var(--accent-primary);
 }
 
@@ -364,6 +374,14 @@ a {
     color: var(--accent-secondary);
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+.timeline-content {
+    background-color: var(--bg-surface);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 /* Utilities */
@@ -425,11 +443,11 @@ a {
     background-color: var(--bg-surface);
     margin: 5% auto;
     padding: 3rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     width: 90%;
     max-width: 800px;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     position: relative;
     transform: translateY(20px);
     transition: transform 0.4s ease;
@@ -515,12 +533,12 @@ a {
     height: 300px;
     object-fit: cover;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery-img:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.2);
+    box-shadow: 0 8px 25px rgba(200, 90, 64, 0.15);
 }
